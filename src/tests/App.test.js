@@ -7,7 +7,7 @@ import App from '../App';
 describe('Requisito 1 - Teste o componente App', () => {
   it('Testa o conjunto de links de navegação na tela', () => {
     renderWithRouter(<App />);
-    const linkParaHome = screen.getByRole('link', { name: 'Home' });
+    const linkParaHome = screen.getByText('Home');
     const linkParaAbout = screen.getByRole('link', { name: /about/i });
     const linkParaFavorites = screen.getByRole('link', { name: /favorite pokémons/i });
 
