@@ -6,9 +6,9 @@ import About from '../components/About';
 describe('Testa o componente About', () => {
   it('Testa se a página contém info sobre a Pokédex', () => {
     renderWithRouter(<About />);
-    const titulo = screen.getByRole('heading', { level: 2, nome: /about pokédex/i });
+    const titulo = screen.getByRole('heading', { level: 2, name: 'About Pokédex' });
     const frase = screen.getAllByText(/Pokémons/i);
-    const img = screen.getByRole('img', { nome: 'Pokédex' });
+    const img = screen.getByRole('img', { name: 'Pokédex' });
     expect(titulo).toBeInTheDocument();
     expect(frase[0]).toBeInTheDocument();
     expect(frase[1]).toBeInTheDocument();
